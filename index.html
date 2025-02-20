@@ -1,34 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Blog</title>
-    <link rel="stylesheet" href="./terminal.css" />
+    <title>Ewan Donovan</title>
+    <link rel="stylesheet" href="./terminal.css">
     <style>    
         :root {
-        --background: #000000;
-        --foreground: #4EEE85;
-        --accent: #4EEE85;
+            --background: #000000;
+            --foreground: #4EEE85;
+            --accent: #4EEE85;
+        }
+
+        body {
+            text-shadow: rgba(34, 255, 0, 0.9) 0px 0px 6px;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: 
+                linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        header {
+            display: flex;
+            padding: 10px;
+        }
+
+        nav {
+            align-content: center;
+        }
+
+        main {
+            width: 40%;
+            margin: auto;
+        }
+
+        h1 {
+            display: flex;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        #headline::after {
+            content: '';
+            background: repeating-linear-gradient(90deg, var(--accent), var(--accent) 2px, transparent 0, transparent 8px);
+            display: block;
+            width: 100%;
+            margin-left: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Hello World!</h1>
-    </header>
+    
+    
     <main>
-        <article>
-            <h2>First Blog Post</h2>
-            <p>Welcome to my simple blog layout. This is a sample post.</p>
-        </article>
-        <article>
-            <h2>Another Post</h2>
-            <p>Here's another example of a blog post.</p>
-        </article>
+        <h1 id="headline">About Me</h1>
+        <p>Hey! My name's Ewan Donovan and welcome to my digital garden.</p>
+        <ul>
+            <li>I'm a software developer with 6 years working in industry.</li>
+            <li>I love all things music theory and production.</li>
+            <li>I am a hobbyist mathematician.</li>
+        </ul>
+        <p>There is no particular structure to this site. Please use the search bar, index, timeline, or the hyperlinks on pages to get around.</p>
+
+<p>I hope you find my little sanctuary thought provoking. Happy surfing!</p>
     </main>
-    <footer>
-        <p>&copy; 2025 My Blog</p>
-    </footer>
-</body>
-</html>
+
+    This site is presently just for experimenting purposes.
+    
+
+</body></html>
